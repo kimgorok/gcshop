@@ -1,13 +1,9 @@
 <table class="table table-bordered">
   <tbody>
-    <% if (result) { %>
     <tr>
       <%- result %>
+      <a href="/merchandise/update/:merId %>">수정</a>
+      <a href="/merchandise/delete/:merId %>">삭제</a>
     </tr>
-    <% } else { %>
-    <tr>
-      <td>자료없음</td>
-    </tr>
-    <% } %>
   </tbody>
 </table>

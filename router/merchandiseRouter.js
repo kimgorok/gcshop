@@ -19,12 +19,8 @@ const upload = multer({
   }),
 });
 
-router.get("/view/v", (req, res) => {
+router.get("/view/:vu", (req, res) => {
   merchandise.view(req, res);
-});
-
-router.get("/view/u", (req, res) => {
-  merchandise.view_u(req, res);
 });
 
 router.get("/create", (req, res) => {
