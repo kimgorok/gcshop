@@ -1,3 +1,5 @@
+// 201935250 김현중
+
 //express와 views 정의
 const express = require("express");
 const app = express();
@@ -8,7 +10,7 @@ app.set("view engine", "ejs");
 var rootRouter = require("./router/rootRouter");
 var authRouter = require("./router/authRouter");
 var codeRouter = require("./router/codeRouter");
-// var personRouter = require("./router/personRouter");
+var personRouter = require("./router/personRouter");
 var merchandiseRouter = require("./router/merchandiseRouter");
 
 // 세션 모듈, 세션 DB 저장 모듈
@@ -39,7 +41,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/", rootRouter);
 app.use("/auth", authRouter);
 app.use("/code", codeRouter);
-// app.use("/person", personRouter);
+app.use("/person", personRouter);
 app.use("/merchandise", merchandiseRouter);
 //app.use('/board',boardRouter);
 

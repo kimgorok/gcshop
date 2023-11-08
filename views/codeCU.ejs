@@ -76,6 +76,7 @@
         name="main_id"
         placeholder="0000"
         style="width: 300px"
+        value="<%= results[0]?.main_id %>"
       />
     </div>
     <div class="mb-3">
@@ -85,7 +86,7 @@
         type="text"
         name="main_name"
         style="width: 300px"
-        value="<%= results[0].main_name %>"
+        value="<%= results[0]?.main_name %>"
       />
     </div>
     <div class="mb-3" hidden="true">
@@ -95,6 +96,7 @@
         type="text"
         name="sub_id"
         style="width: 300px"
+        value="<%= results[0]?.sub_id %>"
       />
     </div>
     <div class="mb-3">
@@ -104,7 +106,7 @@
         type="text"
         name="sub_name"
         style="width: 300px"
-        value="<%= results[0].sub_name %>"
+        value="<%= results[0]?.sub_name %>"
       />
     </div>
     <div class="mb-3">
@@ -115,7 +117,7 @@
         name="start"
         id="start"
         style="width: 300px"
-        value="<%= results[0].start %>"
+        value="<%= results[0]?.start %>"
       />
     </div>
     <div class="mb-3">
@@ -126,7 +128,7 @@
         name="end"
         id="end"
         style="width: 300px"
-        value="<%= results[0].end %>"
+        value="<%= results[0]?.end %>"
       />
     </div>
     <button class="btn btn-outline-primary btn-sm" type="submit">입력</button>
