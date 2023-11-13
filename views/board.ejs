@@ -1,6 +1,8 @@
 <!-- 201935250 김현중 -->
-
+<% if(logined == "NO") {%>
 <table class="table table-bordered border-primary">
+  <h1><%=boardtypes[0].title%></h1>
+
   <thead>
     <td>작성자</td>
     <td>제목</td>
@@ -9,3 +11,16 @@
     <%-results%>
   </thead>
 </table>
+<% }else { %>
+<table class="table table-bordered border-primary">
+  <h1><%=boardtypes[0].title%></h1>
+
+  <thead>
+    <td>작성자</td>
+    <td>제목</td>
+    <td>날짜1</td>
+
+    <%-results%>
+  </thead>
+</table>
+<%}%>
