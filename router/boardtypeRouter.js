@@ -9,8 +9,12 @@ router.get("/type/view", (req, res) => {
   board.view(req, res);
 });
 
-router.get("/type/view/:type_id/1", (req, res) => {
+router.get("/view/:type_id/1", (req, res) => {
   board.view_board(req, res);
+});
+
+router.get("/detail/:type_id/1", (req, res) => {
+  board.view_detail(req, res);
 });
 
 router.get("/type/view/u", (req, res) => {
