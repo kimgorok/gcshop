@@ -6,7 +6,7 @@ const app = express();
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
-//사용자 정의 모듈
+// 사용자 정의 모듈
 var rootRouter = require("./router/rootRouter");
 var authRouter = require("./router/authRouter");
 var codeRouter = require("./router/codeRouter");

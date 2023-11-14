@@ -13,8 +13,12 @@ router.get("/view/:type_id/1", (req, res) => {
   board.view_board(req, res);
 });
 
-router.get("/detail/:type_id/1", (req, res) => {
+router.get("/detail/:board_id/1", (req, res) => {
   board.view_detail(req, res);
+});
+
+router.get("/update/:board_id/:type_id/1", (req, res) => {
+  board.detail_update(req, res);
 });
 
 router.get("/type/view/u", (req, res) => {

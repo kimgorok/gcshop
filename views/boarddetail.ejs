@@ -1,11 +1,22 @@
 <div>
   <h4>제목</h4>
+  <%-result_title%>
   <h4>작성자</h4>
+  <%-result_p_id%>
   <h4>작성일</h4>
+  <%-result_date%>
   <h4>내용</h4>
+  <%-result_title%>
 
-  <%-results%>
   <button class="btn btn-info me-md-2" type="submit">
-    <a href="/board/view/<%= boardtypes[0].type_id %>/1">목록</a>
+    <a href="/board/view/<%-result_board_id%>/1">목록</a>
   </button>
+  <% if (same_user === 'SAME') { %>
+  <button class="btn btn-info me-md-2" type="submit">
+    <a href="/board/update/">수정</a>
+  </button>
+  <button class="btn btn-info me-md-2" type="submit">
+    <a href="/">삭제</a>
+  </button>
+  <% } %>
 </div>

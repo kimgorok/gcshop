@@ -1,26 +1,47 @@
 <!-- 201935250 김현중 -->
-<% if(logined == "NO") {%>
+<% if(logined === "00") { %>
 <table class="table table-bordered border-primary">
-  <h1><%=boardtypes[0].title%></h1>
-
+  <h1><%= boardtyperesult[0].title%></h1>
   <thead>
-    <td>작성자</td>
+    <td>작성자00</td>
     <td>제목</td>
     <td>날짜</td>
-
     <%-results%>
   </thead>
 </table>
-<% }else { %>
+<% } else if(logined === "01") { %>
+<table class="table table-bordered border-primary">
+  <h1><%=boardtyperesult[0].title%></h1>
+  <thead>
+    <td>작성자01</td>
+    <td>제목</td>
+    <td>날짜</td>
+    <%-results%>
+  </thead>
+</table>
+<% } else if(logined === "02") { %>
+
+<table class="table table-bordered border-primary">
+  <h1><%=boardtyperesults[0].title%></h1>
+  <thead>
+    <td>작성자02</td>
+    <td>제목</td>
+    <td>날짜</td>
+    <%-results%>
+  </thead>
+</table>
+<% if( write_YN === "Y") { %>
+<button class="btn btn-info me-md-2" type="submit">
+  <a href="/">글쓰기</a>
+</button>
+<% }else {%> <% } %> <% } else { %>
 <table class="table table-bordered border-primary">
   <h1><%=boardtypes[0].title%></h1>
-
   <thead>
-    <td>작성자</td>
+    <td>작성자""</td>
     <td>제목</td>
     <td>날짜1</td>
-
     <%-results%>
   </thead>
 </table>
-<%}%>
+<% } %>
